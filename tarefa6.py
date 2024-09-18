@@ -21,11 +21,6 @@ def fibonacci_ate(n):
     if (n == 0):
         resultados.append(n1)
         return resultados
-    elif (n == 1):
-        resultados.append(n1)
-        resultados.append(n2)
-        resultados.append(nextNumber)
-        return resultados
     else:
         resultados.append(n1)
         resultados.append(n2)
@@ -39,7 +34,7 @@ def fibonacci_ate(n):
         return resultados
 
 
-lista_fibonacci = fibonacci_ate(10)
+lista_fibonacci = fibonacci_ate(20)
 
 for numero in lista_fibonacci:
     print(numero, "-", end="")
