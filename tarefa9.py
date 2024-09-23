@@ -14,6 +14,7 @@
 # Exemplos:
 # Se a string for "Python é incrível", a função deve retornar {"vogais": 6, "consoantes": 10}.
 # Se a string for "Hello World!", a função deve retornar {"vogais": 3, "consoantes": 7}.
+
 consoantes = (
     'B', 'b', 'C', 'c', 'D', 'd', 'F', 'f', 'G', 'g',
     'H', 'h', 'J', 'j', 'K', 'k', 'L', 'l', 'M', 'm',
