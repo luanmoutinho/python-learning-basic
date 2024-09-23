@@ -15,24 +15,29 @@
 
 import random
 
-continuar = True
-tentativas = 0
-resposta = random.randint(1, 100)
 
-while continuar:
-    palpite = int(input('Dê o seu palpite > '))
-    tentativas = tentativas + 1
-    if (palpite == resposta):
-        print('Parabéns!, você acertou! ')
-        print(f'Número de tentativas: {tentativas}')
-        tentativas = 0
-        proximo = input('Digite X para jogar outra vez ou 0 para sair > ')
-        if (proximo == 'x' or proximo == 'X'):
-            resposta = random.randint(1, 100)
+def jogo_adivinhacao():
+    continuar = True
+    tentativas = 0
+    resposta = random.randint(1, 100)
+
+    while continuar:
+        palpite = int(input('Dê o seu palpite > '))
+        tentativas = tentativas + 1
+        if (palpite == resposta):
+            print('Parabéns!, você acertou! ')
+            print(f'Número de tentativas: {tentativas}')
+            tentativas = 0
+            proximo = input('Digite X para jogar outra vez ou 0 para sair > ')
+            if (proximo == 'x' or proximo == 'X'):
+                resposta = random.randint(1, 100)
+            else:
+                print('Obrigado por jogar!')
+                continuar = False
+        elif (palpite > resposta):
+            print('feedback: "muito alto"')
         else:
-            print('Obrigado por jogar!')
-            continuar = False
-    elif (palpite > resposta):
-        print('feedback: "muito alto"')
-    else:
-        print('feedback: "muito baixo"')
+            print('feedback: "muito baixo"')
+
+
+jogo_adivinhacao()
